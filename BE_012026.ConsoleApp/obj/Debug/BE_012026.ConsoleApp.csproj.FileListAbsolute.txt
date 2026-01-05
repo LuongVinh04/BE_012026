@@ -1,0 +1,8 @@
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\bin\Debug\BE_012026.ConsoleApp.exe.config
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\bin\Debug\BE_012026.ConsoleApp.exe
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\bin\Debug\BE_012026.ConsoleApp.pdb
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\obj\Debug\BE_012026.ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\obj\Debug\BE_012026.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\obj\Debug\BE_012026.ConsoleApp.exe
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\obj\Debug\BE_012026.ConsoleApp.pdb
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.ConsoleApp\obj\Debug\BE_012026.ConsoleApp.exe.config
