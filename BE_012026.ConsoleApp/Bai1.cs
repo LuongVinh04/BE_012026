@@ -16,6 +16,11 @@ namespace BE_012026.ConsoleApp
             string input_a = Console.ReadLine();
             Console.WriteLine("Nhap so thu hai: ");
             string input_b = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input_a) || string.IsNullOrWhiteSpace(input_b))
+            {
+                Console.WriteLine("Khong duoc de trong du lieu");
+                return;
+            }
             if (!double.TryParse(input_a, out double a) || !double.TryParse(input_b, out double b))
             {
                 Console.WriteLine("Vui long nhap so");
@@ -33,6 +38,11 @@ namespace BE_012026.ConsoleApp
             string input_a = Console.ReadLine();
             Console.WriteLine("Nhap so thu hai: ");
             string input_b = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input_a) || string.IsNullOrWhiteSpace(input_b))
+            {
+                Console.WriteLine("Khong duoc de trong du lieu");
+                return;
+            }
             if (!double.TryParse(input_a, out double a) || !double.TryParse(input_b, out double b))
             {
                 Console.WriteLine("Vui long nhap so");
@@ -49,6 +59,11 @@ namespace BE_012026.ConsoleApp
             string input_a = Console.ReadLine();
             Console.WriteLine("Nhap so thu hai: ");
             string input_b = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(input_a) || !string.IsNullOrWhiteSpace(input_b))
+            {
+                Console.WriteLine("Khong duoc de trong du lieu");
+                return;
+            }
             if (!double.TryParse(input_a, out double a) || !double.TryParse(input_b, out double b))
             {
                 Console.WriteLine("Vui long nhap so");

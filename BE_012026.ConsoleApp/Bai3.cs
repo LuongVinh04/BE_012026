@@ -12,7 +12,11 @@ namespace BE_012026.ConsoleApp
         {
             Console.WriteLine("Nhap vao nhiet do: ");
             string input_temp = Console.ReadLine();
-
+            if (string.IsNullOrWhiteSpace(input_temp))
+            {
+                Console.WriteLine("Khong duoc de trong du lieu");
+                return;
+            }
             if (!double.TryParse(input_temp, out double c))
             {
                 Console.WriteLine("Vui long nhap so");

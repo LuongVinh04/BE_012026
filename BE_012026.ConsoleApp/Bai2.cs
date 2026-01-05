@@ -10,11 +10,16 @@ namespace BE_012026.ConsoleApp
     {
         public void Pt_BacNhat()
         {
-                       Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Nhap he so a: ");
             string input_a = Console.ReadLine();
             Console.WriteLine("Nhap he so b: ");
             string input_b = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input_a) || string.IsNullOrWhiteSpace(input_b))
+            {
+                Console.WriteLine("Khong duoc de trong du lieu");
+                return;
+            }
             if (!double.TryParse(input_a, out double a) || !double.TryParse(input_b, out double b))
             {
                 Console.WriteLine("Vui long nhap so");
@@ -47,6 +52,11 @@ namespace BE_012026.ConsoleApp
             string input_b = Console.ReadLine();
             Console.WriteLine("Nhap he so c: ");
             string input_c = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input_a) || string.IsNullOrWhiteSpace(input_b) || string.IsNullOrWhiteSpace(input_c))
+            {
+                Console.WriteLine("Khong duoc de trong du lieu");
+                return;
+            }
             if (!double.TryParse(input_a, out double a) || !double.TryParse(input_b, out double b) || !double.TryParse(input_c, out double c))
             {
                 Console.WriteLine("Vui long nhap so");
