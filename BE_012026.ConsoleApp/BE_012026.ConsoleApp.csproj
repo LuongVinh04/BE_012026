@@ -46,11 +46,18 @@
     <Compile Include="Bai1.cs" />
     <Compile Include="Bai2.cs" />
     <Compile Include="Bai3.cs" />
+    <Compile Include="Class\Car.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE_012026_DataAccess\BE_012026_DataAccess.csproj">
+      <Project>{d7cd5627-5b10-4ac2-986d-ff39e1204d8d}</Project>
+      <Name>BE_012026_DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

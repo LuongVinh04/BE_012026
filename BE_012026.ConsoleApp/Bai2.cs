@@ -60,7 +60,7 @@ namespace BE_012026.ConsoleApp
             if (!double.TryParse(input_a, out double a) || !double.TryParse(input_b, out double b) || !double.TryParse(input_c, out double c))
             {
                 Console.WriteLine("Vui long nhap so");
-                return;
+                return; 
             }
             if (a == 0)
             {

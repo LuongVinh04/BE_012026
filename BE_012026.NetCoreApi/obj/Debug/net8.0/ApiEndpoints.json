@@ -1,0 +1,103 @@
+[
+  {
+    "ContainingType": "BE_012026.NetCoreApi.Controllers.AuthenController",
+    "Method": "Login",
+    "RelativePath": "api/Authen/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestData",
+        "Type": "BE_012026.DataAccess.NetCore.DataObject.AccountLoginRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_012026.NetCoreApi.Controllers.HomeController",
+    "Method": "Product_Delete",
+    "RelativePath": "api/Home/Product_Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestData",
+        "Type": "BE_012026.DataAccess.NetCore.RequestData.Product_DeleteRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_012026.NetCoreApi.Controllers.HomeController",
+    "Method": "Product_GetList",
+    "RelativePath": "api/Home/Product_GetList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestData",
+        "Type": "BE_012026.DataAccess.NetCore.RequestData.Product_GetListRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_012026.NetCoreApi.Controllers.HomeController",
+    "Method": "Product_Insert",
+    "RelativePath": "api/Home/Product_Insert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestData",
+        "Type": "BE_012026.DataAccess.NetCore.RequestData.Product_InsertRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_012026.NetCoreApi.Controllers.HomeController",
+    "Method": "Product_Update",
+    "RelativePath": "api/Home/Product_Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestData",
+        "Type": "BE_012026.DataAccess.NetCore.RequestData.Product_UpdateRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_012026.NetCoreApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BE_012026.NetCoreApi.WeatherForecast, BE_012026.NetCoreApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

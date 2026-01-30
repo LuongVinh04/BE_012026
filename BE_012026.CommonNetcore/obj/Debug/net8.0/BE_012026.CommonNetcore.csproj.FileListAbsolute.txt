@@ -1,0 +1,12 @@
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\bin\Debug\net8.0\BE_012026.CommonNetcore.deps.json
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\bin\Debug\net8.0\BE_012026.CommonNetcore.dll
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\bin\Debug\net8.0\BE_012026.CommonNetcore.pdb
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.AssemblyInfoInputs.cache
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.AssemblyInfo.cs
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.csproj.CoreCompileInputs.cache
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.sourcelink.json
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.dll
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\refint\BE_012026.CommonNetcore.dll
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\BE_012026.CommonNetcore.pdb
+C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.CommonNetcore\obj\Debug\net8.0\ref\BE_012026.CommonNetcore.dll
