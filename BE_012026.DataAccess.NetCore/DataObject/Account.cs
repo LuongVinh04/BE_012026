@@ -14,5 +14,8 @@ namespace BE_012026.DataAccess.NetCore.DataObject
         public string? Address { get; set; }
         public string? FullName { get; set; }
         public int IsAdmin { get; set; }
+        public DateTime? ExpiredTime { get; set; }
+        public string? RefreshToken { get; set; }
+
     }
 }

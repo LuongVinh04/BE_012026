@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="BE_012026.CommonNetcore/BE_012026.CommonNetcore.csproj" />
+  <Project Path="BE_012026.DataAccess.NetCore/BE_012026.DataAccess.NetCore.csproj" />
+  <Project Path="BE_012026.DataAccess/BE_012026.DataAccess.csproj" />
+  <Project Path="BE_012026.NetCoreApi/BE_012026.NetCoreApi.csproj" />
+  <Project Path="BE_012026.NetCoreWeb/BE_012026.NetCoreWeb.csproj" />
+  <Project Path="BE_012026_DataAccess/BE_012026_DataAccess.csproj" />
+</Solution>

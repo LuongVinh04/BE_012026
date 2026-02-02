@@ -2,4 +2,26 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+
 /BE_012026.ConsoleApp/.vs/BE_012026.ConsoleApp
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+
+# .NET
+*.dll
+*.exe
+*.pdb
+
+# NuGet
+project.assets.json
+project.nuget.cache
+
+# Logs
+*.log

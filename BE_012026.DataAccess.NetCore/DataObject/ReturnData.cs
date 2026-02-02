@@ -17,5 +17,6 @@ namespace BE_012026.DataAccess.NetCore.DataObject
         public string? UserName { set; get; }
         public string ? FullName { set; get; }
         public string? token { set; get; }
+        public string? refreshToken { set; get; }
     }
 }

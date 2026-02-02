@@ -26,6 +26,15 @@ namespace BE_012026.NetCoreApi.Controllers
             _unitOfWork = unitOfWork;
         }
         [HttpPost("Product_GetList")]
+<<<<<<< HEAD
+=======
+        // Filter -> Claims
+        // B1: Filter (Attributes)
+        // -> Implement Interfcae IAuthorizationFilter
+        // -> doc identity trong ham overide cua IAuthorizationFilter
+        // -> Doc Claims trong identity
+        [BE_012026.NetCoreApi.Filter.BE_012026_Authorize("Product_GetList", "ISVIEW")]
+>>>>>>> 2fff400 (New)
         public async Task<IActionResult> Product_GetList(Product_GetListRequestData requestData)
         {
             try

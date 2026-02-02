@@ -17,6 +17,31 @@ namespace BE_012026.DataAccess.NetCore.Services
         {
             _context = dbcontext;
         }
+
+
+        public async Task<int> Acccount_Update_RefreshToken(AccountUpdateRefreshRequestData requestData)
+        {
+            try
+            {
+                var account = _context.account?.FirstOrDefault(x => x.AccountID == requestData.AccountID);
+                if (account == null)
+                {
+                    throw new Exception("Khong tim thay tai khoan");
+                }
+                account.AccountID = requestData.AccountID;
+                account.RefreshToken = requestData.RefreshToken;
+                account.ExpiredTime = requestData.ExpiredTime;
+                 _context.account.Update(account);
+
+                return await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+
         public async Task<Account> Account_Login(AccountLoginRequestData requestData)
         {
             try
@@ -36,6 +61,12 @@ namespace BE_012026.DataAccess.NetCore.Services
             }
 
         }
+
+        public async Task<Account> Account_GetByUserName(string UserName) 
+        {
+            return _context.account.Where(s => s.UserName == UserName).FirstOrDefault();
+        }
+
 
     }
 }
