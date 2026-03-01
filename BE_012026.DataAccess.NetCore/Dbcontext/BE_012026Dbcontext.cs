@@ -20,5 +20,6 @@ namespace BE_012026.DataAccess.NetCore.Dbcontext
         public virtual DbSet<Product> product { get; set; }
         public virtual DbSet<Category> category { get; set; }
         public virtual DbSet<Account> account { get; set; }
+        public virtual DbSet<Permission> permission {  get; set; }
     }
 }

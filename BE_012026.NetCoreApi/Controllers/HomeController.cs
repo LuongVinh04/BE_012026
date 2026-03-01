@@ -5,6 +5,11 @@ using BE_012026.DataAccess.NetCore.RequestData;
 using BE_012026.DataAccess.NetCore.UnitOfWork;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage.Json;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace BE_012026.NetCoreApi.Controllers
@@ -21,25 +26,44 @@ namespace BE_012026.NetCoreApi.Controllers
         //    _productGenericServices = productGenericServices;
         //}
         private readonly IUnitOfWork _unitOfWork;
-        public HomeController(IUnitOfWork unitOfWork)
+        private readonly IDistributedCache _cache;
+        public HomeController(IUnitOfWork unitOfWork, IDistributedCache cache)
         {
             _unitOfWork = unitOfWork;
+            _cache = cache;
         }
         [HttpPost("Product_GetList")]
-<<<<<<< HEAD
-=======
         // Filter -> Claims
         // B1: Filter (Attributes)
         // -> Implement Interfcae IAuthorizationFilter
         // -> doc identity trong ham overide cua IAuthorizationFilter
         // -> Doc Claims trong identity
         [BE_012026.NetCoreApi.Filter.BE_012026_Authorize("Product_GetList", "ISVIEW")]
->>>>>>> 2fff400 (New)
+
         public async Task<IActionResult> Product_GetList(Product_GetListRequestData requestData)
         {
             try
             {
+
+                //b1 : kiểm tra dữ liệu trong cache
+
+                //Nếu dữ liệu đã có trong cache thì trả về dữ liệu từ cache
+                var keyCache = "Product_GetList";
+                var cacheData = await _cache.GetStringAsync(keyCache);
+                if (!string.IsNullOrEmpty(cacheData))
+                {
+                    var cachedList = JsonConvert.DeserializeObject<List<Product>>(cacheData);
+                    return Ok(cachedList);
+                }
+                //Nếu dữ liệu chưa có trong cache thì lấy dữ liệu từ database và lưu vào cache
+                // Đi vào db để lấy
                 var list = await _unitOfWork.ProductGenericRepository.GetList(requestData);
+                //lưu dữ liệu vào trong cache
+                var cacheOptions = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5) //thoi gian het han cache
+                };
+                await _cache.SetStringAsync(keyCache, JsonConvert.SerializeObject(list), cacheOptions);
                 return Ok(list);
             }
             catch (Exception ex)
@@ -49,23 +73,23 @@ namespace BE_012026.NetCoreApi.Controllers
             }
         }
         [HttpPost("Product_Insert")]
-        public async Task<IActionResult> Product_Insert(Product_InsertRequestData  requestData)
+        public async Task<IActionResult> Product_Insert(Product_InsertRequestData requestData)
         {
             try
             {
 
                 //check du lieu dau vao
-                if(string.IsNullOrWhiteSpace(requestData.ProductName))
+                if (string.IsNullOrWhiteSpace(requestData.ProductName))
                 {
                     return BadRequest("Ten san pham khong duoc de trong");
                 }
                 //kien tra do dai ky tu
-                if(requestData.ProductName.Length > 250)
+                if (requestData.ProductName.Length > 250)
                 {
                     return BadRequest("Ten san pham khong duoc dai qua 250 ky tu");
                 }
                 //check xss
-                if(!BE_012026.CommonNetcore.Sercutity.CheckXSSInput(requestData.ProductName))
+                if (!BE_012026.CommonNetcore.Sercutity.CheckXSSInput(requestData.ProductName))
                 {
                     return BadRequest("Ten san pham khong hop le");
                 }

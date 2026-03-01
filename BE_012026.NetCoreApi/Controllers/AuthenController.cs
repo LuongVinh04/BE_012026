@@ -1,10 +1,14 @@
-﻿using BE_012026.DataAccess.NetCore.DataObject;
+﻿
+using BE_012026.DataAccess.NetCore.DataObject;
 using BE_012026.DataAccess.NetCore.Enum;
 using BE_012026.DataAccess.NetCore.IServices;
+using BE_012026.DataObject.User_Session;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using System.Collections.Specialized;
 using System.IdentityModel.Tokens.Jwt;
 using System.Reflection.Metadata.Ecma335;
@@ -20,10 +24,12 @@ namespace BE_012026.NetCoreApi.Controllers
     {
         private readonly IAccountRepository _accountRepositpry;
         private readonly IConfiguration _configuration;
-        public AuthenController(IAccountRepository accountRepository, IConfiguration configuration)
+        private readonly IDistributedCache _cache;
+        public AuthenController(IAccountRepository accountRepository, IConfiguration configuration, IDistributedCache cache)
         {
             _accountRepositpry = accountRepository;
             _configuration = configuration;
+            _cache = cache;
         }
         [HttpPost("Login")]
         public async Task<ActionResult> Login(AccountLoginRequestData requestData)
@@ -72,6 +78,24 @@ namespace BE_012026.NetCoreApi.Controllers
                     RefreshToken = refreshToken,
                     ExpiredTime = expiredRefreshToken
                 });
+
+                //  Luu token vao Redis. Voi thoi gian song = thoi han cua token
+                var userSession = new User_Session
+                {
+                    AccountID = account.AccountID,
+                    Token = token,
+                    DeviceID = requestData.DeviceID,
+                    ExpiredTime = tokenNew.ValidTo,
+                };
+                var keyCache = $"User_Session_"+account.AccountID+ "_" + requestData.DeviceID;
+                var cacheOptions = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5) //thoi gian het han cache
+                };
+
+                await _cache.SetStringAsync(keyCache, JsonConvert.SerializeObject(userSession), cacheOptions);
+
+
 
                 //b3: tra ve token
                 returnData.ResponseCode = (int)AccountManager_Status.ACCOUNT_INSERT_SUCCESS;

@@ -16,3 +16,21 @@ C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.DataAccess.NetCore\obj\Debu
 C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.CommonNetcore.dll
 C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.CommonNetcore.pdb
 C:\Users\Luong Vinh\source\repos\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_01202.6CE5DA6B.Up2Date
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.DataAccess.NetCore.deps.json
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.DataAccess.NetCore.runtimeconfig.json
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.DataAccess.NetCore.dll
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.DataAccess.NetCore.pdb
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.CommonNetcore.dll
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\bin\Debug\net8.0\BE_012026.CommonNetcore.pdb
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.AssemblyInfo.cs
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.sourcelink.json
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_01202.6CE5DA6B.Up2Date
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.dll
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\refint\BE_012026.DataAccess.NetCore.dll
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.pdb
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\BE_012026.DataAccess.NetCore.genruntimeconfig.cache
+C:\Users\User\source\repos\BE_012026\BE_012026\BE_012026.DataAccess.NetCore\obj\Debug\net8.0\ref\BE_012026.DataAccess.NetCore.dll
